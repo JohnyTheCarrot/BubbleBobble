@@ -6,7 +6,7 @@
 
 int main()
 {
-    roingine::Engine roingine{"Bubble Bobble", 800, 600};
+    roingine::Engine roingine{"Bubble Bobble", 774, 676};
     roingine::KeyboardInput::Provide(std::make_unique<roingine::SDLKeyboardInputService>());
 
     roingine::Scene scene{roingine::scene_loader::LoadScene("scenes/level1.json")};

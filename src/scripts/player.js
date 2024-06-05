@@ -5,7 +5,7 @@ const utils = require("utils.js");
 const PLAYER_SIZE = 50;
 const PLAYER_START_X = 100;
 const PLAYER_START_Y = 100;
-const JUMP_SPEED = 400;
+const JUMP_SPEED = 375;
 const MOVEMENT_SPEED = 300;
 
 var transform, rigidbody, collider;
@@ -51,16 +51,23 @@ function Init() {
 
     collider.onCollision(function(other, hitX, hitY, hitDirection) {
         const otherScripts = other.getComponent("Scripts");
-        if (!otherScripts)
+        if (!otherScripts) {
             return;
+        }
 
         const floorScript = otherScripts.getScript("Floor");
         if (floorScript && hitDirection === HIT_UP && isFalling() && transform.getWorldPosition().y + 5 > hitY) {
             transform.setLocalPosition(null, hitY);
             rigidbody.setProperty("speedY", 0);
             canJump = true;
+            return;
         } else {
             canJump = false;
+        }
+
+        const wallScript = otherScripts.getScript("Wall");
+        if (wallScript) {
+            transform.setLocalPosition(hitX, null);
         }
     });
 }

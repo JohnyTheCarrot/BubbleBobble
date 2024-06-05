@@ -4,26 +4,72 @@
 		{
 			"label": "__player",
 			"components": [
-				{
-					"name": "Script",
-					"args": ["scripts/player.js"]
-				}
+				{"name": "Script", "args": ["scripts/player.js"]}
 			]
 		},
 		{
 			"components": [
-				{
-					"name": "Script",
-					"args": ["scripts/floor.js", 50, 50, 200, 25]
-				}
+				{"name": "Script", "args": ["scripts/floor.js", 0, 0, 800, 25]}
 			]
 		},
 		{
 			"components": [
-				{
-					"name": "Script",
-					"args": ["scripts/floor.js", 50, 150, 200, 25]
-				}
+				{"name": "Script", "args": ["scripts/floor.js", 0, 600, 800, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 0, 125, 100, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 674, 125, 100, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 175, 125, 424, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 0, 250, 100, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 674, 250, 100, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 175, 250, 424, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 0, 375, 100, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 674, 375, 100, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/floor.js", 175, 375, 424, 25]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/wall.js", 0, 0, 50, 600]}
+			]
+		},
+		{
+			"components": [
+				{"name": "Script", "args": ["scripts/wall.js", 724, 0, 50, 600]}
 			]
 		}
 	]

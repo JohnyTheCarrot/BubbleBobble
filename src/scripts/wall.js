@@ -1,4 +1,4 @@
-const SCRIPT_NAME = "Floor";
+const SCRIPT_NAME = "Wall";
 
 function Init(x, y, width, height) {
     current.addComponent("Transform", x, y);
