@@ -1,0 +1,30 @@
+{
+	"name": "Main",
+	"objects": [
+		{
+			"label": "__player",
+			"components": [
+				{
+					"name": "Script",
+					"args": ["scripts/player.js"]
+				}
+			]
+		},
+		{
+			"components": [
+				{
+					"name": "Script",
+					"args": ["scripts/floor.js", 50, 50, 200, 25]
+				}
+			]
+		},
+		{
+			"components": [
+				{
+					"name": "Script",
+					"args": ["scripts/floor.js", 50, 150, 200, 25]
+				}
+			]
+		}
+	]
+}
