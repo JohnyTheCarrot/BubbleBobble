@@ -2,72 +2,103 @@
 	"name": "Main",
 	"objects": [
 		{
-			"label": "__player",
+			"uid": "__player",
 			"components": [
-				{"name": "Script", "args": ["scripts/player.js"]}
+				{"name": "Script", "args": ["scripts/player.js", 100, 100]}
 			]
 		},
 		{
+			"label": "Enemy",
+			"components": [
+				{"name": "Script", "args": ["scripts/enemy.js", 362, 575, "__player"]}
+			]
+		},
+		{
+			"label": "Enemy",
+			"components": [
+				{"name": "Script", "args": ["scripts/enemy.js", 362, 500, "__player"]}
+			]
+		},
+		{
+			"label": "Enemy",
+			"components": [
+				{"name": "Script", "args": ["scripts/enemy.js", 362, 475, "__player"]}
+			]
+		},
+		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 0, 0, 800, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 0, 600, 800, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 0, 125, 100, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 674, 125, 100, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 175, 125, 424, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 0, 250, 100, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 674, 250, 100, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 175, 250, 424, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 0, 375, 100, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 674, 375, 100, 25]}
 			]
 		},
 		{
+			"label": "Floor",
 			"components": [
 				{"name": "Script", "args": ["scripts/floor.js", 175, 375, 424, 25]}
 			]
 		},
 		{
+			"label": "Wall",
 			"components": [
 				{"name": "Script", "args": ["scripts/wall.js", 0, 0, 50, 600]}
 			]
 		},
 		{
+			"label": "Wall",
 			"components": [
 				{"name": "Script", "args": ["scripts/wall.js", 724, 0, 50, 600]}
 			]
