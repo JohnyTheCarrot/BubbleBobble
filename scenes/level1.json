@@ -2,9 +2,15 @@
 	"name": "Main",
 	"objects": [
 		{
+			"uid": "__bubble_pool",
+			"components": [
+				{"name": "Script", "args": ["scripts/bubble_pool.js"]}
+			]
+		},
+		{
 			"uid": "__player",
 			"components": [
-				{"name": "Script", "args": ["scripts/player.js", 100, 100]}
+				{"name": "Script", "args": ["scripts/player.js", 100, 100, "__bubble_pool"]}
 			]
 		},
 		{

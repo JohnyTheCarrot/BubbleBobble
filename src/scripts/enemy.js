@@ -39,6 +39,7 @@ function Init(x, y, hPlayer) {
     transform = current.getComponent("Transform");
     var renderer = current.getComponent("RectRenderer");
     renderer.setColor(0xd83a3a);
+
     var collider = current.getComponent("RectCollider");
     collider.onCollision(function (other, hitX, hitY, hitDir) {
         if (other.hasLabel("Wall")) {
