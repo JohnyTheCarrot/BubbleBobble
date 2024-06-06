@@ -1,10 +1,8 @@
 const SCRIPT_NAME = "LivingEntity";
 
-const HIT_UP = 0;
-const HIT_DOWN = 1;
-const HIT_LEFT = 2;
-const HIT_RIGHT = 3;
 const JUMP_SPEED = 375;
+
+const constants = require("constants.js");
 
 function isFalling(rigidbody) {
     const speedY = rigidbody.getProperty("speedY");
@@ -24,8 +22,14 @@ function Init(x, y, size) {
     rigidbody = scripts.addScript("scripts/rigidbody.js");
 
     collider.onCollision(function (other, hitX, hitY, hitDirection) {
+        if (other.hasLabel("Ceiling")) {
+            transform.setLocalPosition(null, hitY);
+            rigidbody.setProperty("speedY", 0);
+            return;
+        }
+
         if (other.hasLabel("Floor")
-            && hitDirection === HIT_UP
+            && hitDirection === constants.HIT_UP
             && isFalling(rigidbody)
             && transform.getWorldPosition().y + 5 > hitY
         ) {

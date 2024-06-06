@@ -38,9 +38,12 @@
 			]
 		},
 		{
-			"label": "Floor",
+			"label": "Ceiling",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 0, 600, 800, 25]}
+				{"name": "Transform", "args": [0, 600]},
+				{"name": "Rect", "args": [800, 25]},
+				{"name": "RectRenderer", "args": []},
+				{"name": "RectCollider", "args": [800, 25]}
 			]
 		},
 		{

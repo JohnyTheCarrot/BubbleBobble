@@ -31,6 +31,14 @@ function moveLeft() {
     isWanderingLeft = true;
 }
 
+function die() {
+    current.destroy();
+    const worldPos = transform.getWorldPosition();
+
+    var enemyBubble = scene.addGameObject();
+    enemyBubble.addComponent("Scripts").addScript("scripts/enemy_bubble.js", worldPos.x, worldPos.y);
+}
+
 function Init(x, y, hPlayer) {
     playerObject = scene.getGameObject(hPlayer);
     playerTransform = playerObject.getComponent("Transform");
@@ -56,6 +64,12 @@ function Init(x, y, hPlayer) {
                 moveRight();
                 break;
             }
+            return;
+        }
+
+        if (other.hasLabel("Bubble")) {
+            die();
+            other.setEnabled(false);
         }
     })
 

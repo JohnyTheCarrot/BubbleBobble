@@ -47,4 +47,18 @@ function Init(x, y, hBubblePool) {
     livingEntityComp = scripts.addScript("scripts/living_entity.js", x, y, PLAYER_SIZE);
     transform = current.getComponent("Transform");
     rigidbody = scripts.getScript("Rigidbody");
+
+    var collider = current.getComponent("RectCollider");
+    collider.onCollision(function (other, hitX, hitY) {
+        if (other.hasLabel("EnemyBubble")) {
+            const enemyBubbleScript = other.getComponent("Scripts").getScript("EnemyBubble");
+            enemyBubbleScript.callMethod("pop");
+            return;
+        }
+
+        if (other.hasLabel("Food")) {
+            const food = other.getComponent("Scripts").getScript("Food");
+            food.callMethod("eat");
+        }
+    });
 }

@@ -11,18 +11,20 @@ const TTL_S = 0.25;
 var speedFactor = 1;
 var age = 0;
 
+const BUBBLE_WIDTH = 35;
+const BUBBLE_HEIGHT = 50;
+
 function Init() {
     transform = current.addComponent("Transform", 100, 100);
-    current.addComponent("Rect", 35, 50);
+    current.addComponent("Rect", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.addComponent("RectRenderer");
+    current.addComponent("RectCollider", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.setEnabled(false);
+    current.setLabel("Bubble");
 }
 
 function startFloating() {
     current.setEnabled(false);
-}
-
-function OnEnabled() {
 }
 
 function OnDisabled() {
