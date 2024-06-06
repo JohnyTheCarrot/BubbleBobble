@@ -1,5 +1,5 @@
 {
-	"name": "Level1",
+	"name": "Level3",
 	"objects": [
 		{
 			"uid": "__bubble_pool",
@@ -44,60 +44,6 @@
 				{"name": "Rect", "args": [800, 25]},
 				{"name": "RectRenderer", "args": []},
 				{"name": "RectCollider", "args": [800, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 0, 125, 100, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 674, 125, 100, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 175, 125, 424, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 0, 250, 100, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 674, 250, 100, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 175, 250, 424, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 0, 375, 100, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 674, 375, 100, 25]}
-			]
-		},
-		{
-			"label": "Floor",
-			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 175, 375, 424, 25]}
 			]
 		},
 		{

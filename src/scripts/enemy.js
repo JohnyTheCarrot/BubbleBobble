@@ -37,6 +37,7 @@ function die() {
 
     var enemyBubble = scene.addGameObject();
     enemyBubble.addComponent("Scripts").addScript("scripts/enemy_bubble.js", worldPos.x, worldPos.y);
+    roingine.fireEvent("enemyDied");
 }
 
 function Init(x, y, hPlayer) {
@@ -74,6 +75,7 @@ function Init(x, y, hPlayer) {
     })
 
     rigidbody = scripts.getScript("Rigidbody");
+    roingine.fireEvent("enemySpawned");
 }
 
 function Update() {

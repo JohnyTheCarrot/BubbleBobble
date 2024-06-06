@@ -26,7 +26,7 @@ include(FetchContent)
 FetchContent_Declare(
 	Roingine
 	GIT_REPOSITORY	https://github.com/JohnyTheCarrot/Roingine.git
-	GIT_TAG 		c92179044ee06d4b59dacd36bae6fcde1bf7ba7c
+	GIT_TAG 		d42e4b76c1a20713c0ff31290a545ae9caeb7784
 	GIT_SHALLOW TRUE
 )
 

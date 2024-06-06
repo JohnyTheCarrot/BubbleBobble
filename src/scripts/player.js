@@ -34,10 +34,15 @@ function spewBubble() {
     bubblePoolScript.callMethod("spawnBubble", worldPos.x, worldPos.y, facingDir);
 }
 
+function skipLevel() {
+    roingine.fireEvent("nextLevelRequested");
+}
+
 input.onKeyDown(input.KEY_SPACE, jump);
 input.onKeyHeld(input.KEY_A, moveLeft);
 input.onKeyHeld(input.KEY_D, moveRight);
 input.onKeyDown(input.KEY_W, spewBubble);
+input.onKeyDown(input.KEY_F1, skipLevel);
 
 function Init(x, y, hBubblePool) {
     const bubblePool = scene.getGameObject(hBubblePool);
