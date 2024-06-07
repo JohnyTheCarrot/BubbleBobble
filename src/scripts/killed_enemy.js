@@ -16,8 +16,7 @@ function Init(x, y) {
     speedX = utils.randomRange(-200, 200);
 
     transform = current.addComponent("Transform", x, y);
-    current.addComponent("Rect", WIDTH, HEIGHT);
-    current.addComponent("RectRenderer");
+    current.addComponent("RectRenderer", WIDTH, HEIGHT);
     const collider = current.addComponent("RectCollider", WIDTH, HEIGHT);
     collider.onCollision(function (other, hitX, hitY, hitDir) {
         if (other.hasLabel("Wall")) {

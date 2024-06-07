@@ -50,6 +50,7 @@ function Init(x, y, hBubblePool) {
     bubblePoolScript = bubblePoolScripts.getScript("BubblePool");
 
     livingEntityComp = scripts.addScript("scripts/living_entity.js", x, y, PLAYER_SIZE);
+    current.addComponent("RectRenderer", PLAYER_SIZE, PLAYER_SIZE);
     transform = current.getComponent("Transform");
     rigidbody = scripts.getScript("Rigidbody");
 

@@ -41,8 +41,7 @@
 			"label": "Ceiling",
 			"components": [
 				{"name": "Transform", "args": [0, 600]},
-				{"name": "Rect", "args": [800, 25]},
-				{"name": "RectRenderer", "args": []},
+				{"name": "RectRenderer", "args": [800, 25]},
 				{"name": "RectCollider", "args": [800, 25]}
 			]
 		},

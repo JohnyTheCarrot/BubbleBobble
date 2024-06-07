@@ -46,7 +46,7 @@ function Init(x, y, hPlayer) {
     livingEntityComp = scripts.addScript("scripts/living_entity.js", x, y, ENEMY_SIZE);
 
     transform = current.getComponent("Transform");
-    var renderer = current.getComponent("RectRenderer");
+    var renderer = current.addComponent("RectRenderer", ENEMY_SIZE, ENEMY_SIZE);
     renderer.setColor(0xd83a3a);
 
     var collider = current.getComponent("RectCollider");

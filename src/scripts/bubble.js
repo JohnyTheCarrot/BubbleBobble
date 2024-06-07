@@ -16,8 +16,7 @@ const BUBBLE_HEIGHT = 50;
 
 function Init() {
     transform = current.addComponent("Transform", 100, 100);
-    current.addComponent("Rect", BUBBLE_WIDTH, BUBBLE_HEIGHT);
-    current.addComponent("RectRenderer");
+    current.addComponent("RectRenderer", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.addComponent("RectCollider", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.setEnabled(false);
     current.setLabel("Bubble");

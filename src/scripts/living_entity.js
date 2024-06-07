@@ -16,8 +16,6 @@ function Init(x, y, size) {
     entitySize = size;
     transform = current.addComponent("Transform", x, y);
 
-    current.addComponent("Rect", size, size);
-    current.addComponent("RectRenderer");
     var collider = current.addComponent("RectCollider", size, size);
     rigidbody = scripts.addScript("scripts/rigidbody.js");
 

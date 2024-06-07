@@ -9,8 +9,7 @@ var transform;
 
 function Init(x, y) {
     transform = current.addComponent("Transform", x, y);
-    current.addComponent("Rect", BUBBLE_WIDTH, BUBBLE_HEIGHT);
-    current.addComponent("RectRenderer");
+    current.addComponent("RectRenderer", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.addComponent("RectCollider", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.setLabel("EnemyBubble");
 }
