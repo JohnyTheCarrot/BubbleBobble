@@ -33,7 +33,6 @@ int main()
                 if (data.eventName == "enemySpawned")
                     ++numEnemies;
                 else if (data.eventName == "enemyDied" && --numEnemies == 0) {
-                    ++currentLevelIdx;
                     shouldLoad = true;
                 } else if (data.eventName == "nextLevelRequested") {
                     loadNext();

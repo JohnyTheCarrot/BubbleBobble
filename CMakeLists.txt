@@ -26,7 +26,7 @@ include(FetchContent)
 FetchContent_Declare(
 	Roingine
 	GIT_REPOSITORY	https://github.com/JohnyTheCarrot/Roingine.git
-	GIT_TAG 		d6405a0726dd3a81f0ed09039d8dc5f0165e4f62
+	GIT_TAG 		57136cb77f42b1418f0fd2039133d62e5a9b9b79
 	GIT_SHALLOW TRUE
 )
 
@@ -123,6 +123,12 @@ endforeach()
 foreach(scene ${Scenes})
 	get_filename_component(FILENAME "${scene}" NAME_WLE)
 	configure_file(${scene} "scenes/${FILENAME}.json" COPYONLY)
+endforeach()
+FILE(GLOB Images res/img/*.*)
+foreach(img ${Images})
+	get_filename_component(DIR "${img}" DIRECTORY)
+	get_filename_component(FILENAME "${img}" NAME)
+	configure_file(${img} "res/img/${FILENAME}.${EXTENSION}" COPYONLY)
 endforeach()
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD

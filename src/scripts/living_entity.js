@@ -20,9 +20,15 @@ function Init(x, y, size) {
     rigidbody = scripts.addScript("scripts/rigidbody.js");
 
     collider.onCollision(function (other, hitX, hitY, hitDirection) {
-        if (other.hasLabel("Ceiling")) {
-            transform.setLocalPosition(null, hitY);
+        if (other.hasLabel("FullCollision")) {
+            if (hitDirection === constants.HIT_UP
+                && isFalling(rigidbody)
+                && transform.getWorldPosition().y + 5 > hitY)
+                    script.properties.canJump = true;
+
             rigidbody.setProperty("speedY", 0);
+            transform.setLocalPosition(null, hitY);
+
             return;
         }
 
@@ -49,7 +55,7 @@ function FixedUpdate() {
     const screenWidth = 774, screenHeight = 676;
 
     if (worldPos.y < -entitySize)
-        transform.setLocalPosition(null, screenHeight);
+        transform.setLocalPosition(null, screenHeight - 100);
 }
 
 function jump() {

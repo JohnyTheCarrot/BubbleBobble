@@ -29,7 +29,7 @@ function Init(x, y) {
             return;
         }
 
-        if (other.hasLabel("Ceiling")) {
+        if (other.hasLabel("FullCollision")) {
             speedY = -Math.abs(speedY);
             return;
         }

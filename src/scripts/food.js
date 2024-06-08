@@ -5,8 +5,7 @@ const HEIGHT = 50;
 
 function Init(x, y) {
     current.addComponent("Transform", x, y);
-    var renderer = current.addComponent("RectRenderer", WIDTH, HEIGHT);
-    renderer.setColor(0x43ef51);
+    current.addComponent("TextureRenderer", "res/img/Watermelon.png", WIDTH, HEIGHT);
     current.addComponent("RectCollider", WIDTH, HEIGHT);
     current.setLabel("Food");
 }

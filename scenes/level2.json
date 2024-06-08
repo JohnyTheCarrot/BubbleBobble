@@ -34,69 +34,89 @@
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 0, 0, 800, 25]}
+				{"name": "Transform", "args": [0, 0]},
+				{"name": "RectCollider", "args": [800, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 800, 25, 25, 25]}
 			]
 		},
 		{
-			"label": "Ceiling",
+			"label": "FullCollision",
 			"components": [
 				{"name": "Transform", "args": [0, 600]},
-				{"name": "RectRenderer", "args": [800, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 800, 25, 25, 25]},
 				{"name": "RectCollider", "args": [800, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 100, 125, 160, 25]}
+				{"name": "Transform", "args": [100, 125]},
+				{"name": "RectCollider", "args": [160, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 160, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 310, 125, 154, 25]}
+				{"name": "Transform", "args": [310, 125]},
+				{"name": "RectCollider", "args": [154, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 154, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 514, 125, 160, 25]}
+				{"name": "Transform", "args": [514, 125]},
+				{"name": "RectCollider", "args": [160, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 160, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 170, 250, 434, 25]}
+				{"name": "Transform", "args": [170, 250]},
+				{"name": "RectCollider", "args": [434, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 434, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 240, 375, 122, 25]}
+				{"name": "Transform", "args": [240, 375]},
+				{"name": "RectCollider", "args": [122, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 122, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 412, 375, 122, 25]}
+				{"name": "Transform", "args": [412, 375]},
+				{"name": "RectCollider", "args": [122, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 122, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Floor",
 			"components": [
-				{"name": "Script", "args": ["scripts/floor.js", 310, 500, 154, 25]}
+				{"name": "Transform", "args": [310, 500]},
+				{"name": "RectCollider", "args": [154, 25]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 154, 25, 25, 25]}
 			]
 		},
 		{
 			"label": "Wall",
 			"components": [
-				{"name": "Script", "args": ["scripts/wall.js", 0, 0, 50, 600]}
+				{"name": "Transform", "args": [0, 0]},
+				{"name": "RectCollider", "args": [50, 600]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 50, 600, 25, 25]}
 			]
 		},
 		{
 			"label": "Wall",
 			"components": [
-				{"name": "Script", "args": ["scripts/wall.js", 724, 0, 50, 600]}
+				{"name": "Transform", "args": [724, 0]},
+				{"name": "RectCollider", "args": [50, 600]},
+				{"name": "TextureRenderer", "args": ["res/img/Tile2.png", 50, 600, 25, 25]}
 			]
 		}
 	]
