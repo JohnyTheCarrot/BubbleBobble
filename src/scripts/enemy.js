@@ -1,7 +1,7 @@
 const SCRIPT_NAME = "Enemy";
 const utils = require("utils.js");
 
-const ENEMY_SIZE = 37;
+const ENEMY_SIZE = 48;
 const MOVE_SPEED = 100;
 const MAX_PLAYER_ENEMY_DISTANCE = 50;
 
@@ -10,7 +10,7 @@ const HIT_DOWN = 1;
 const HIT_LEFT = 2;
 const HIT_RIGHT = 3;
 
-var playerObject, playerTransform, livingEntityComp;
+var playerObject, playerTransform, livingEntityComp, renderer;
 var transform, rigidbody;
 
 var isWanderingLeft = false;
@@ -21,6 +21,7 @@ function moveRight() {
 
     utils.translate(transform, MOVE_SPEED, 0);
     isWanderingLeft = false;
+    renderer.setFlipped(false);
 }
 
 function moveLeft() {
@@ -29,6 +30,7 @@ function moveLeft() {
 
     utils.translate(transform, -MOVE_SPEED, 0);
     isWanderingLeft = true;
+    renderer.setFlipped(true);
 }
 
 function die() {
@@ -46,8 +48,7 @@ function Init(x, y, hPlayer) {
     livingEntityComp = scripts.addScript("scripts/living_entity.js", x, y, ENEMY_SIZE);
 
     transform = current.getComponent("Transform");
-    var renderer = current.addComponent("RectRenderer", ENEMY_SIZE, ENEMY_SIZE);
-    renderer.setColor(0xd83a3a);
+    renderer = current.addComponent("AnimationRenderer", "res/img/ZenChanRun.png", 4, 0.1, ENEMY_SIZE, ENEMY_SIZE);
 
     var collider = current.getComponent("RectCollider");
     collider.onCollision(function (other, hitX, hitY, hitDir) {

@@ -16,7 +16,8 @@ function Init(x, y) {
     speedX = utils.randomRange(-200, 200);
 
     transform = current.addComponent("Transform", x, y);
-    current.addComponent("RectRenderer", WIDTH, HEIGHT);
+    current.addComponent("AnimationRenderer", "res/img/ZenChanDeath.png", 4, 0.1, WIDTH, HEIGHT);
+
     const collider = current.addComponent("RectCollider", WIDTH, HEIGHT);
     collider.onCollision(function (other, hitX, hitY, hitDir) {
         if (other.hasLabel("Wall")) {

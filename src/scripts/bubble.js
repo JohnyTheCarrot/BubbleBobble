@@ -5,18 +5,18 @@ const constants = require("constants.js");
 var timeout;
 var transform;
 
-const BUBBLE_SPEED = 800;
+const BUBBLE_SPEED = 500;
 const TTL_S = 0.25;
 
 var speedFactor = 1;
 var age = 0;
 
-const BUBBLE_WIDTH = 35;
+const BUBBLE_WIDTH = 50;
 const BUBBLE_HEIGHT = 50;
 
 function Init() {
     transform = current.addComponent("Transform", 100, 100);
-    current.addComponent("RectRenderer", BUBBLE_WIDTH, BUBBLE_HEIGHT);
+    current.addComponent("AnimationRenderer", "res/img/Bubble_Anim.png", 3, 0.1, BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.addComponent("RectCollider", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.setEnabled(false);
     current.setLabel("Bubble");

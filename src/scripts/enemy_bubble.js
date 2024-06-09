@@ -9,7 +9,7 @@ var transform;
 
 function Init(x, y) {
     transform = current.addComponent("Transform", x, y);
-    current.addComponent("RectRenderer", BUBBLE_WIDTH, BUBBLE_HEIGHT);
+    current.addComponent("AnimationRenderer", "res/img/ZenChanBubble.png", 3, 0.2, BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.addComponent("RectCollider", BUBBLE_WIDTH, BUBBLE_HEIGHT);
     current.setLabel("EnemyBubble");
 }
